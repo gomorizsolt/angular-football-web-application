@@ -31,4 +31,4 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
           # https://docs.netlify.com/cli/get-started/#manual-deploys
-          args: deploy --dir=dist --prod
+          args: deploy --dir=dist/angular-football-web-application --prod
