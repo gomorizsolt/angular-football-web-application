@@ -1,27 +1,31 @@
-# AngularFootballWebApplication
+# Football Web Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
+This side-project is developed for the purpose of gaining insight into Angular and its whole ecosystem.
 
-## Development server
+## API
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The application primarily communicates with the https://api.football-data.org/v2 endpoint and its resources.
 
-## Code scaffolding
+## Deployment
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Deploy to Netlify](https://github.com/gomorizsolt/angular-football-web-application/workflows/Deploy%20to%20Netlify/badge.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/0e5094be-5fe4-4fd3-be7a-7c647f71a82a/deploy-status)](https://app.netlify.com/sites/competent-sammet-ef70a6/deploys)
 
-## Build
+Live URL: https://football-web-application.netlify.app/
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Each push to the master branch initiates an automated deployment to Netlify.
 
-## Running unit tests
+## Development
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+TODO environment variables
 
-## Running end-to-end tests
+## Routes
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+TODO
 
-## Further help
+## Future Improvements
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+TODO
+
+## License
+
+TODO
