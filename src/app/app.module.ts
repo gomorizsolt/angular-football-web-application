@@ -1,18 +1,30 @@
+// Modules
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 
+// Routing
 import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { LayoutComponent } from "./layout/layout.component";
+
+// Components
+import { AppComponent } from "./container/app.component";
+import { MainPageComponent } from "./container/main-page/main-page.component";
+import { CompetitionPageComponent } from "./container/competition-page/competition-page.component";
+import { EventPageComponent } from "./container/event-page/event-page.component";
+import { PageNotFoundComponent } from "./container/page-not-found/page-not-found.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    MainPageComponent,
+    CompetitionPageComponent,
+    EventPageComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
