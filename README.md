@@ -1,6 +1,6 @@
 # Football Web Application
 
-This side-project is developed for the purpose of gaining insight into Angular and its whole ecosystem.
+This side-project is developed to gain valuable insights into Angular.
 
 ## API
 
