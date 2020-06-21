@@ -1,1 +1,18 @@
-<p>main-page works!</p>
+<section>
+  <ng-container *ngIf="competitions$ | async as competitions; else loading">
+    <h1>All Football Competitions</h1>
+    <div class="competitions-wrapper">
+      <a
+        class="competitions-wrapper__tile"
+        *ngFor="let competition of competitions"
+        [routerLink]="['/', competition.id]"
+      >
+        <p>{{ competition.name }} / {{ competition.area }}</p>
+      </a>
+    </div>
+  </ng-container>
+</section>
+
+<ng-template #loading>
+  Loading competitions ...
+</ng-template>
