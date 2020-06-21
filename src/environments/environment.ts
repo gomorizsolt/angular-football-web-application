@@ -1,7 +1,7 @@
 import secrets from "../secrets";
 
 if (!secrets.apiKey) {
-  console.error("API key is not configured, request quota is severely limited.")
+  console.error("API key is not configured, request quota is severely limited.");
 }
 
 export const environment = {
