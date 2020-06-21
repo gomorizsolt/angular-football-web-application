@@ -1,0 +1,20 @@
+.competitions-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  row-gap: 2rem;
+  column-gap: 1rem;
+}
+
+.competitions-wrapper__tile {
+  background-color: #383838;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: background-color 125ms ease-in;
+  text-decoration: none;
+}
+
+.competitions-wrapper__tile:hover {
+  background-color: rgb(15, 15, 15);
+}
