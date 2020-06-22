@@ -1,3 +1,3 @@
 export default {
-  apiKey: "<api-key>"
+  apiKey: "<api-key>",
 };

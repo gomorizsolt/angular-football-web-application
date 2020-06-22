@@ -1,0 +1,37 @@
+<ng-container *ngIf="data$ | async as data; else loading">
+  <h1>League: {{ data.competition.name }}</h1>
+  <div class="matches-wrapper">
+    <a
+      class="matches-wrapper__tile"
+      *ngFor="let match of data.matches"
+      [routerLink]="['/competitions', data.competition.id, 'matches', match.id]"
+    >
+      <div class="flex-score">
+        <div>{{ match.homeTeam.name }}</div>
+        <div>{{ match.score.fullTime.homeTeam }}</div>
+      </div>
+      <div class="flex-score">
+        <div>{{ match.awayTeam.name }}</div>
+        <div>{{ match.score.fullTime.awayTeam }}</div>
+      </div>
+      <div
+        class="status"
+        [ngClass]="{
+          'status--red':
+            match.status === 'FINISHED' ||
+            match.status === 'POSTPONED' ||
+            match.status === 'CANCELLED',
+          'status--blue': match.status === 'SCHEDULED',
+          'status--green':
+            match.status === 'IN_PLAY' || match.status === 'PAUSED'
+        }"
+      >
+        {{ match.status }}
+      </div>
+    </a>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

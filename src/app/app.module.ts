@@ -1,32 +1,39 @@
 // Modules
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
+
+// HTTP
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HttpErrorInterceptor } from "./http-error-interceptor";
 
 // Routing
 import { AppRoutingModule } from "./app-routing.module";
+import { CompetitionsPageComponent } from "./container/competitions-page/competitions-page.component";
+import { MatchesPageComponent } from "./container/matches-page/matches-page.component";
+import { EventPageComponent } from "./container/event-page/event-page.component";
+import { PageNotFoundComponent } from "./container/page-not-found/page-not-found.component";
 
 // Components
 import { AppComponent } from "./container/app.component";
-import { MainPageComponent } from "./container/main-page/main-page.component";
-import { CompetitionPageComponent } from "./container/competition-page/competition-page.component";
-import { EventPageComponent } from "./container/event-page/event-page.component";
-import { PageNotFoundComponent } from "./container/page-not-found/page-not-found.component";
+import { LoaderComponent } from "./components/loader/loader.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent,
-    CompetitionPageComponent,
+    CompetitionsPageComponent,
+    MatchesPageComponent,
     EventPageComponent,
     PageNotFoundComponent,
+    LoaderComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true,
+    },
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -22,13 +22,13 @@ cp src/secrets.example.ts src/secrets.ts
 
 3. Update the `apiKey` property to the obtained API key.
 
-## Routes
-
-TODO
-
 ## Future Improvements
 
-TODO
+### Error Handling
+
+Right now there's no convenient, reusable and user-friendly error handling. If an outgoing request fails (for instance, when either the league's or the match's unique identifier doesn't exist or it's limited to a paid plan), then the app will keep showing the loading indicator. An error message is printed to the console but it's useless from the user perspective.
+
+Resources to possible solutions: [#1](https://sebastian-holstein.de/post/error-handling-angular-async-pipe/).
 
 ## License
 
