@@ -1,13 +1,20 @@
 <section>
   <ng-container *ngIf="competitions$ | async as competitions; else loading">
-    <h1>Leagues</h1>
+    <h1>Pick a league</h1>
     <div class="competitions-wrapper">
       <a
         class="competitions-wrapper__tile"
         *ngFor="let competition of competitions"
         [routerLink]="['/competitions', competition.id]"
       >
-        <p>{{ competition.name }} / {{ competition.area.name }}</p>
+        <div class="title">
+          <p>{{ competition.name }}</p>
+          <img
+            *ngIf="competition.area.ensignUrl"
+            [src]="competition.area.ensignUrl"
+            [alt]="competition.area.name"
+          />
+        </div>
       </a>
     </div>
   </ng-container>

@@ -1,19 +1,19 @@
 <ng-container *ngIf="data$ | async as data; else loading">
   <h1>League: {{ data.competition.name }}</h1>
+  <p>Select a match to inspect.</p>
   <div class="matches-wrapper">
     <a
       class="matches-wrapper__tile"
       *ngFor="let match of data.matches"
       [routerLink]="['/competitions', data.competition.id, 'matches', match.id]"
     >
-      <div class="flex-score">
-        <div>{{ match.homeTeam.name }}</div>
-        <div>{{ match.score.fullTime.homeTeam }}</div>
-      </div>
-      <div class="flex-score">
-        <div>{{ match.awayTeam.name }}</div>
-        <div>{{ match.score.fullTime.awayTeam }}</div>
-      </div>
+      <div>{{ match.homeTeam.name }} vs {{ match.awayTeam.name }}</div>
+
+      <h2 *ngIf="match.score.winner">
+        {{ match.score.fullTime.homeTeam }} -
+        {{ match.score.fullTime.awayTeam }}
+      </h2>
+
       <div
         class="status"
         [ngClass]="{

@@ -2,8 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { FootballApiService } from "../../services/football-api.service";
 import { Observable } from "rxjs";
-import { Match } from "src/app/models/match";
-import { Competition } from "src/app/models/competition";
+import { Match, Competition } from "../../common/interfaces";
 
 @Component({
   selector: "app-matches-page",
@@ -28,7 +27,7 @@ export class MatchesPageComponent implements OnInit {
       const competitionId = params.get("competitionId");
 
       if (competitionId) {
-        this.data$ = this.apiService.listMatches(+competitionId);
+        this.data$ = this.apiService.fetchMatches(+competitionId);
       }
     });
   }

@@ -1,1 +1,13 @@
-<p>event-page works!</p>
+<ng-container *ngIf="event$ | async as event; else loading">
+  <h1>Event: {{ event.homeTeam.name }} vs {{ event.awayTeam.name }}</h1>
+  <p *ngIf="event.score.winner">
+    Score: {{ event.score.fullTime.homeTeam }} - {{ event.score.fullTime.awayTeam }}
+  </p>
+  <p>League: {{ event.competition.name }}</p>
+  <p>Status: {{ event.status }}</p>
+  <p>Date: {{ event.utcDate | date }}</p>
+</ng-container>
+
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

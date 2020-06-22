@@ -17,3 +17,14 @@
 .competitions-wrapper__tile:hover {
   background-color: rgb(15, 15, 15);
 }
+
+.competitions-wrapper__tile .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.competitions-wrapper__tile .title img {
+  max-width: 30px;
+  height: 100%;
+}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { Competition } from "../../models/competition";
 import { FootballApiService } from "../../services/football-api.service";
 import { Observable } from "rxjs";
+import { Competition } from "../../common/interfaces";
 
 @Component({
   selector: "app-competitions-page",
@@ -14,6 +14,6 @@ export class CompetitionsPageComponent implements OnInit {
   constructor(private apiService: FootballApiService) {}
 
   ngOnInit(): void {
-    this.competitions$ = this.apiService.listCompetitions();
+    this.competitions$ = this.apiService.fetchCompetitions();
   }
 }
