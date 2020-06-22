@@ -1,10 +1,9 @@
 # Football Web Application
 
-This side-project is developed to gain valuable insights into Angular.
+This project is developed to fulfill the requirements of a coding challenge for a full-time job.
 
-## API & Throttling
-
-The application primarily communicates with the https://api.football-data.org/v2 endpoint Refer to [their docs](https://www.football-data.org/documentation/api) for more information on the available resources and throttling.
+## Development Resources
+- [API docs](https://www.football-data.org/documentation/api)
 
 ## Deployment
 
@@ -16,9 +15,14 @@ Each push to the master branch initiates an automated deployment to Netlify.
 
 ## Development
 
-1. Obtain a free API key from https://www.football-data.org/ by signing up to their service.
-2. `cp src/secrets.example.ts src/secrets.ts`
-3. Update the `apiKey` property.
+1. Request an API key from [football-data.org](https://www.football-data.org/).
+2. Create a `secrets.ts` file in the `src/` directory:
+
+```sh
+cp src/secrets.example.ts src/secrets.ts
+```
+
+3. Update the `apiKey` property to the obtained API key.
 
 ## Routes
 
