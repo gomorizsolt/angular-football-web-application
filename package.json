@@ -2,15 +2,10 @@
   "name": "angular-football-web-application",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "dev": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "prebuild": "replace '%API_KEY%' $API_KEY src/environments/environment.prod.ts",
     "postbuild": "replace $API_KEY '%API_KEY%' src/environments/environment.prod.ts",
-    "build:prod": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "dev": "ng serve"
   },
   "private": true,
   "dependencies": {

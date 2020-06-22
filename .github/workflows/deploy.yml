@@ -25,7 +25,7 @@ jobs:
       - name: Build
         env:
           FOOTBALL_API_KEY: ${{ secrets.FOOTBALL_API_KEY }}
-        run: npm run build:prod
+        run: API_KEY="$FOOTBALL_API_KEY" npm run build
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
         env:
