@@ -7,9 +7,7 @@ This project is developed to fulfill the requirements of a coding challenge for 
 
 ## Deployment
 
-![Deploy to Netlify](https://github.com/gomorizsolt/angular-football-web-application/workflows/Deploy%20to%20Netlify/badge.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/0e5094be-5fe4-4fd3-be7a-7c647f71a82a/deploy-status)](https://app.netlify.com/sites/competent-sammet-ef70a6/deploys)
-
-Live URL: https://football-web-application.netlify.app/
+![Deploy to Netlify](https://github.com/gomorizsolt/angular-football-web-application/workflows/CI/badge.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/0e5094be-5fe4-4fd3-be7a-7c647f71a82a/deploy-status)](https://app.netlify.com/sites/competent-sammet-ef70a6/deploys)
 
 Each push to the master branch initiates an automated deployment to Netlify.
 

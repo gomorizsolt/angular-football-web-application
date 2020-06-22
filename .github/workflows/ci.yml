@@ -1,4 +1,4 @@
-name: Deploy to Netlify
+name: CI
 
 on:
   push:
@@ -9,9 +9,26 @@ env:
   node_version: "12.x"
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set NodeJS up
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.node_version }}
+      - name: Cache JS dependencies
+        uses: c-hive/gha-npm-cache@v1
+      - name: Install JS dependencies
+        run: npm install
+      - name: Lint
+        run: npm run lint
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    needs: lint
     steps:
       - name: Checkout
         uses: actions/checkout@v2
