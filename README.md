@@ -1,6 +1,6 @@
 # Football Web Application
 
-This project is developed to fulfill the requirements of a coding challenge for a full-time job.
+This project was requested by a company as a coding challenge for a full-time job position.
 
 ## Development Resources
 - [API docs](https://www.football-data.org/documentation/api)

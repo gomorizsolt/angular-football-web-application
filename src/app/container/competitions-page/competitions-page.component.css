@@ -25,6 +25,6 @@
 }
 
 .competitions-wrapper__tile .title img {
-  max-width: 30px;
-  height: 100%;
+  width: 30px;
+  height: auto;
 }
