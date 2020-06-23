@@ -24,8 +24,9 @@ cp src/secrets.example.ts src/secrets.ts
 
 ## Future Improvements
 
-- Error handling: Right now there's no convenient, reusable and user-friendly error handling. If an outgoing request fails (for instance, when either the league's or the match's unique identifier doesn't exist or the selected item is available exclusively for paid plans), then the app will keep showing the loading indicator. Even though the error is printed out to the console, it's meaningless and degrades the experience from the perspective of the user. Resources to possible solutions: [#1](https://sebastian-holstein.de/post/error-handling-angular-async-pipe/).
-- Periodically refetch data (optionally also provide a button to manually do so).
+- Error handling: right now there's no convenient, reusable and user-friendly error handling. If an outgoing request fails (for instance, when either the league's or the match's unique identifier doesn't exist or the selected item is available exclusively for paid plans), then the app will keep showing the loading indicator. Even though the error is printed out to the console, it's meaningless and degrades the experience from the perspective of the user. Resources to possible solutions: [#1](https://sebastian-holstein.de/post/error-handling-angular-async-pipe/).
+- Event page: it's poorly designed and doesn't convey useful information.
+- Periodically refetch data to avoid stale scores (optionally also provide a button to do so manually).
 
 ## License
 
